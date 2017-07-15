@@ -50,7 +50,7 @@ for (let i = 0; i < _data.length; i++) {
 
   // add email
   let email = document.createElement('p');
-  email.innerHTML = customers.results[i].name.email
+  email.innerHTML = `${customers.results[i].email}`;
 
   personContainer.appendChild(email);
 
@@ -62,7 +62,7 @@ for (let i = 0; i < _data.length; i++) {
 
   // add values, then add in appropriate order
   // street, address, city, phone number
-  line1.innerHTML = `${customers.results[i].location.street}`
+  line1.innerHTML = `${customers.results[i].location.street}`;
   line2.innerHTML = `${customers.results[i].location.city}, ${customers.results[i].location.state}, ${customers.results[i].location.postcode}`;
   phoneNumber.innerHTML = `${customers.results[i].cell}`
 
@@ -90,6 +90,5 @@ for (let i = 0; i < _data.length; i++) {
 
   // add personContainer to allPeopleContainer
   allPeopleContainer.appendChild(personContainer);
-
 
 }
